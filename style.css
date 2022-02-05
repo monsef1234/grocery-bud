@@ -1,0 +1,139 @@
+:root {
+  --first-bgcolor: #d8ecdc;
+  --first-color: #56b15d;
+  --second-bgcolor: #f8d7da;
+  --second-color: #e66b6b;
+  --third-color: #a5d5f8;
+  --forth-color: #063251;
+  --letter-spacing: 3px;
+}
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f1f5f8;
+}
+span {
+  display: block;
+}
+/* ------------------------------------------------- */
+.center {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0px #e5e9ec;
+  width: 550px;
+}
+.center .popup {
+  text-transform: capitalize;
+  position: relative;
+  height: 25px;
+  margin-bottom: 20px;
+}
+
+.center .popup .noitem,
+.center .popup .additem,
+.center .popup .clearitem,
+.center .popup .removeditem {
+  text-align: center;
+  padding: 5px;
+  font-size: 12px;
+  border-radius: 5px;
+  font-weight: 500;
+  letter-spacing: var(--letter-spacing);
+  display: none;
+}
+.center .popup .noitem,
+.center .popup .clearitem,
+.center .popup .removeditem {
+  background-color: var(--second-bgcolor);
+  color: var(--second-color);
+}
+.center .popup .additem {
+  background-color: var(--first-bgcolor);
+  color: var(--first-color);
+}
+.center h2 {
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: var(--letter-spacing);
+  font-size: 30px;
+  color: var(--forth-color);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.center form {
+  display: flex;
+  margin-bottom: 40px;
+}
+.center input {
+  width: 75%;
+  background-color: #f1f5f8;
+  border: none;
+  padding: 5px 10px;
+  font-size: 18px;
+  font-weight: normal;
+}
+.center form button {
+  display: block;
+  width: 25%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: none;
+  background-color: var(--third-color);
+  padding: 5px 10px;
+  letter-spacing: var(--letter-spacing);
+  cursor: pointer;
+}
+.center .items div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.center .items div:hover {
+  background-color: #f1f5f8;
+}
+.center .items div .mine {
+  letter-spacing: var(--letter-spacing);
+  text-transform: capitalize;
+}
+.center .items div .icons {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+}
+.center .items div .icons i:first-of-type {
+  margin-right: 10px;
+  color: var(--first-color);
+}
+.center .items div .icons i:last-of-type {
+  color: var(--second-color);
+}
+.center #clear {
+  all: unset;
+  display: block;
+  margin: 0 auto;
+  letter-spacing: 4px;
+  text-transform: capitalize;
+  color: var(--second-color);
+  cursor: pointer;
+  transition: 0.3s;
+  display: none;
+  height: 35px;
+}
+.center #clear:hover {
+  color: #ec5252;
+}
